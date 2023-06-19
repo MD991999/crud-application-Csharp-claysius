@@ -1,0 +1,11 @@
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\bin\Debug\crud application.exe.config
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\bin\Debug\crud application.exe
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\bin\Debug\crud application.pdb
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.csproj.SuggestedBindingRedirects.cache
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud_application.Form1.resources
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud_application.Properties.Resources.resources
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.exe
+C:\Users\hp\Desktop\sql projects\task3-crud-application\crud application\crud application\obj\Debug\crud application.pdb
