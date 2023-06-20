@@ -62,9 +62,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.userdetailsdataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.userdetailsdataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.userdetailsdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +84,9 @@
             this.textBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Purple;
             this.textBox2.Location = new System.Drawing.Point(20, 341);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 46);
+            this.textBox2.Size = new System.Drawing.Size(244, 26);
             this.textBox2.TabIndex = 3;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -98,12 +96,9 @@
             this.textBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Purple;
             this.textBox4.Location = new System.Drawing.Point(299, 268);
-            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(240, 51);
+            this.textBox4.Size = new System.Drawing.Size(240, 26);
             this.textBox4.TabIndex = 5;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -113,9 +108,8 @@
             this.textBox5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.Purple;
             this.textBox5.Location = new System.Drawing.Point(299, 108);
-            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(240, 45);
+            this.textBox5.Size = new System.Drawing.Size(240, 38);
             this.textBox5.TabIndex = 6;
             // 
             // textBox6
@@ -126,26 +120,20 @@
             this.textBox6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.Purple;
             this.textBox6.Location = new System.Drawing.Point(20, 269);
-            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(244, 50);
+            this.textBox6.Size = new System.Drawing.Size(244, 26);
             this.textBox6.TabIndex = 7;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox7
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.Purple;
             this.textBox7.Location = new System.Drawing.Point(20, 108);
-            this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(244, 45);
+            this.textBox7.Size = new System.Drawing.Size(244, 38);
             this.textBox7.TabIndex = 8;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox9
             // 
@@ -155,12 +143,9 @@
             this.textBox9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.Color.Purple;
             this.textBox9.Location = new System.Drawing.Point(299, 341);
-            this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(240, 46);
+            this.textBox9.Size = new System.Drawing.Size(240, 26);
             this.textBox9.TabIndex = 10;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox10
             // 
@@ -170,12 +155,9 @@
             this.textBox10.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.Purple;
             this.textBox10.Location = new System.Drawing.Point(299, 185);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(240, 44);
+            this.textBox10.Size = new System.Drawing.Size(244, 26);
             this.textBox10.TabIndex = 11;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -196,7 +178,6 @@
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "Lastname";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -217,7 +198,6 @@
             this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 15;
             this.label4.Text = "Gender";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -228,7 +208,6 @@
             this.label5.Size = new System.Drawing.Size(83, 16);
             this.label5.TabIndex = 16;
             this.label5.Text = "Username";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -259,7 +238,6 @@
             this.label8.Size = new System.Drawing.Size(113, 16);
             this.label8.TabIndex = 19;
             this.label8.Text = "Date of birth";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -289,11 +267,9 @@
             this.textBox11.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.Color.Purple;
             this.textBox11.Location = new System.Drawing.Point(299, 413);
-            this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(240, 42);
+            this.textBox11.Size = new System.Drawing.Size(240, 26);
             this.textBox11.TabIndex = 21;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -317,7 +293,6 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(244, 46);
             this.textBox12.TabIndex = 23;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -329,7 +304,6 @@
             this.label12.TabIndex = 26;
             this.label12.Text = "Password";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // textBox13
             // 
@@ -339,11 +313,9 @@
             this.textBox13.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.Color.Purple;
             this.textBox13.Location = new System.Drawing.Point(299, 477);
-            this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(240, 41);
+            this.textBox13.Size = new System.Drawing.Size(240, 26);
             this.textBox13.TabIndex = 25;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -362,12 +334,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox14.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.ForeColor = System.Drawing.Color.Purple;
-            this.textBox14.Location = new System.Drawing.Point(12, 477);
-            this.textBox14.Multiline = true;
+            this.textBox14.Location = new System.Drawing.Point(20, 477);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(244, 41);
+            this.textBox14.Size = new System.Drawing.Size(244, 26);
             this.textBox14.TabIndex = 27;
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -460,17 +430,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // userdetailsdataGridView
-            // 
-            this.userdetailsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userdetailsdataGridView.Location = new System.Drawing.Point(568, 46);
-            this.userdetailsdataGridView.Name = "userdetailsdataGridView";
-            this.userdetailsdataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.userdetailsdataGridView.Size = new System.Drawing.Size(694, 458);
-            this.userdetailsdataGridView.TabIndex = 34;
-            this.userdetailsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userdetailsdataGridView_CellClick);
-            this.userdetailsdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userdetailsdataGridView_CellContentClick);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -479,27 +438,40 @@
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // textBox1
+            // label14
             // 
-            this.textBox1.BackColor = System.Drawing.Color.RosyBrown;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(161, 8);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 48);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "SIGN UP";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tempus Sans ITC", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Green;
+            this.label14.Location = new System.Drawing.Point(221, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(112, 38);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Sign up";
+            // 
+            // userdetailsdataGridView
+            // 
+            this.userdetailsdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userdetailsdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.userdetailsdataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.userdetailsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userdetailsdataGridView.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.userdetailsdataGridView.Location = new System.Drawing.Point(581, 108);
+            this.userdetailsdataGridView.Name = "userdetailsdataGridView";
+            this.userdetailsdataGridView.ReadOnly = true;
+            this.userdetailsdataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.userdetailsdataGridView.Size = new System.Drawing.Size(694, 458);
+            this.userdetailsdataGridView.TabIndex = 40;
+            this.userdetailsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userdetailsdataGridView_CellClick_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1300, 749);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.userdetailsdataGridView);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -577,9 +549,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.DataGridView userdetailsdataGridView;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView userdetailsdataGridView;
     }
 }
 

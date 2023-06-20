@@ -23,13 +23,12 @@ namespace crud_application
         private void Form1_Load(object sender, EventArgs e)
         {
             Getuserdetails();
-
-        
         }
         //FORM SESSION-to view the entire details of users
         private void Getuserdetails()
         {
-            string query = "Select * From Userdetailstable";
+            // string query = "Select * From Userdetailstable";
+            string query = "Exec SP_crudapplicationcsharp @type='Select'";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.CommandType = CommandType.Text;
             DataTable dt = new DataTable();
@@ -40,19 +39,13 @@ namespace crud_application
             userdetailsdataGridView.DataSource = dt;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
         //INSERT SESSION
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "Insert Into Userdetailstable (Firstname,Lastname,Date_Of_Birth,Age,Gender,Phone,Email,Username,State,District,Address,Password) values (@Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@pasword)";
+            string query = "Insert Into Userdetailstable (Firstname,Lastname,Date_Of_Birth,Age,Gender,Phone,Email,Username,State,District,Address,Password) values (@Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@password)";
             SqlCommand cmd = new SqlCommand(query, conn);
             //gender:to add the details of gender on to the database
             string gender = radioButton2.Checked ? "Male" : "Female";
@@ -68,7 +61,7 @@ namespace crud_application
             cmd.Parameters.AddWithValue("@state",textBox2.Text);
             cmd.Parameters.AddWithValue("@district",textBox11.Text);
             cmd.Parameters.AddWithValue("@address",textBox12.Text);
-            cmd.Parameters.AddWithValue("@pasword",textBox13.Text);
+            cmd.Parameters.AddWithValue("@password",textBox13.Text);
             conn.Open();
             //used to execute a SQL command that does not return any result set, such as an INSERT, UPDATE, DELETE, or other action queries.
             cmd.ExecuteNonQuery();
@@ -79,47 +72,12 @@ namespace crud_application
 
         }
 
+        
 
+      
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-        {
-
-        }
+     
+      
         //UPDATE SESSION
         private void button4_Click(object sender, EventArgs e)
         {
@@ -160,46 +118,11 @@ namespace crud_application
 
         }
 
-        private void userdetailsdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
+      
         //DATAGRID SESSION
         private void userdetailsdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //rowindex:index of the row
-            
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = userdetailsdataGridView.Rows[e.RowIndex];
-
-                //how to display the value of gender in the table
-                string gender = row.Cells["Gender"].Value.ToString();
-                if (gender == "Male")
-                {
-                    radioButton2.Checked = true;
-                    radioButton1.Checked = false;
-                }
-                else
-                {
-                    radioButton1.Checked = true;
-                    radioButton2.Checked = false;
-
-                }
-                        //============
-                Id = Convert.ToInt32(row.Cells[0].Value);
-                textBox7.Text = row.Cells[1].Value.ToString();
-                textBox5.Text = row.Cells[2].Value.ToString();
-                dateTimePicker1.Value = Convert.ToDateTime(row.Cells[3].Value); // Convert to DateTime other wise we will get error
-                textBox10.Text = row.Cells[4].Value.ToString();
-                textBox4.Text = row.Cells[6].Value.ToString();
-                textBox6.Text = row.Cells[7].Value.ToString();
-                textBox9.Text = row.Cells[8].Value.ToString();
-                textBox2.Text = row.Cells[9].Value.ToString();
-                textBox11.Text = row.Cells[10].Value.ToString();
-                textBox12.Text = row.Cells[11].Value.ToString();
-                textBox13.Text = row.Cells[12].Value.ToString();
-            }
+          
         }
         //DELETE SESSION
         private void button3_Click(object sender, EventArgs e)
@@ -231,8 +154,10 @@ namespace crud_application
         private void ClearTextBoxes()
         {
             foreach (Control item in this.Controls)
+                //here controls means the userinterface elements /components present in the forms
             {
                 if (item is TextBox textBox)
+                   // to both check the type of the control(item) and have a strongly-typed reference to the control(textBox) if it is indeed a TextBox.
                 {
                     textBox.Clear();
                 }
@@ -246,6 +171,42 @@ namespace crud_application
                 {
                     dateTimePicker.Value = DateTime.Today; // Set to current date
                 }
+            }
+        }
+
+        private void userdetailsdataGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            //rowindex:index of the row
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = userdetailsdataGridView.Rows[e.RowIndex];
+
+                //how to display the value of gender in the table
+                string gender = row.Cells["Gender"].Value.ToString();
+                if (gender == "Male")
+                {
+                    radioButton2.Checked = true;
+                    radioButton1.Checked = false;
+                }
+                else
+                {
+                    radioButton1.Checked = true;
+                    radioButton2.Checked = false;
+
+                }
+                //============
+                Id = Convert.ToInt32(row.Cells[0].Value);
+                textBox7.Text = row.Cells[1].Value.ToString();
+                textBox5.Text = row.Cells[2].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(row.Cells[3].Value); // Convert to DateTime other wise we will get error
+                textBox10.Text = row.Cells[4].Value.ToString();
+                textBox4.Text = row.Cells[6].Value.ToString();
+                textBox6.Text = row.Cells[7].Value.ToString();
+                textBox9.Text = row.Cells[8].Value.ToString();
+                textBox2.Text = row.Cells[9].Value.ToString();
+                textBox11.Text = row.Cells[10].Value.ToString();
+                textBox12.Text = row.Cells[11].Value.ToString();
+                textBox13.Text = row.Cells[12].Value.ToString();
             }
         }
     }
