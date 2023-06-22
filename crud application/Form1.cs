@@ -28,7 +28,8 @@ namespace crud_application
         private void Getuserdetails()
         {
             // string query = "Select * From Userdetailstable";
-            string query = "Exec SP_crudapplicationcsharp @type='Select'";
+            string query = "Exec SPS_crudapplicationuserdetails";
+            //The 'date' type expects a valid date value or a null value .If you want to keep the existing value of 'Date_Of_Birth' unchanged and not modify it, you can pass NULL instead of an empty string.
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.CommandType = CommandType.Text;
             DataTable dt = new DataTable();
@@ -43,17 +44,20 @@ namespace crud_application
 
        
         //INSERT SESSION
-        private void button1_Click(object sender, EventArgs e)
+       private void button1_Click(object sender, EventArgs e)
         {
-            string query = "Insert Into Userdetailstable (Firstname,Lastname,Date_Of_Birth,Age,Gender,Phone,Email,Username,State,District,Address,Password) values (@Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@password)";
+           //  string query = "Insert Into Userdetailstable (Firstname,Lastname,Date_Of_Birth,Age,Gender,Phone,Email,Username,State,District,Address,Password) values  (@Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@password)";
+            string datetime = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+               string query = "Exec  SPI_crudapplicationuserdetails @Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@password ";
             SqlCommand cmd = new SqlCommand(query, conn);
             //gender:to add the details of gender on to the database
             string gender = radioButton2.Checked ? "Male" : "Female";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@Firstname",textBox7.Text);
             cmd.Parameters.AddWithValue("@Lastname",textBox5.Text);
-            cmd.Parameters.AddWithValue("@dateofbirth",dateTimePicker1.Text);
-            cmd.Parameters.AddWithValue("@age",textBox10.Text);
+          cmd.Parameters.AddWithValue("@dateofbirth",datetime);
+            //The SqlDbType enumeration in C# is used to specify the data type of a parameter when working with SQL Server databases.When you assign SqlDbType.Date to the @dateofbirth parameter, you are explicitly indicating that the parameter should be treated as a date type in the SQL Server database. 
+            cmd.Parameters.AddWithValue("@age", textBox10.Text);
             cmd.Parameters.AddWithValue("@gender",gender);
             cmd.Parameters.AddWithValue("@phone",textBox4.Text);
             cmd.Parameters.AddWithValue("@email",textBox6.Text);
@@ -73,7 +77,7 @@ namespace crud_application
         }
 
         
-
+    
       
 
      
@@ -83,13 +87,18 @@ namespace crud_application
         {
             if (Id > 0)
             {
-                string query = "Update Userdetailstable Set Firstname=@Firstname,Lastname=@Lastname,Date_Of_Birth=@dateofbirth,Age=@Age,Gender=@gender,Phone=@phone,Email=@email,Username=@username,State=@state,District=@district,Address=@Address,Password=@password where Id=@Id";
+              // string query = "Update Userdetailstable Set Firstname=@Firstname,Lastname=@Lastname,Date_Of_Birth=@dateofbirth,Age=@Age,Gender=@gender,Phone=@phone,Email=@email,Username=@username,State=@state,District=@district,Address=@Address,Password=@password where Id=@Id";
+             string query= "Exec SPU_crudapplicationuserdetails @Id,@Firstname,@Lastname,@dateofbirth,@age,@gender,@phone,@email,@username,@state,@district,@address,@password";
+                string datetime = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+
+
                 string gender = radioButton2.Checked ? "Male" : "Female";
                 SqlCommand cmd= new SqlCommand(query,conn);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@Firstname", textBox7.Text);
                 cmd.Parameters.AddWithValue("@Lastname", textBox5.Text);
-                cmd.Parameters.AddWithValue("@dateofbirth", dateTimePicker1.Value);
+                cmd.Parameters.AddWithValue("@dateofbirth", datetime);
+                //textbox.text always return a string value
                 cmd.Parameters.AddWithValue("@age", textBox10.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
                 cmd.Parameters.AddWithValue("@phone", textBox4.Text);
@@ -127,8 +136,9 @@ namespace crud_application
         //DELETE SESSION
         private void button3_Click(object sender, EventArgs e)
         {
-            
-                string query = "Delete From Userdetailstable  where Id=@Id";
+
+            //           string query = "Delete From Userdetailstable  where Id=@Id";
+            string query = "Exec SPD_crudapplicationuserdetails @Id ";
                 string gender = radioButton2.Checked ? "Male" : "Female";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.Text;
